@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+button {
+  cursor: pointer;
+  border: none;
+}
+input {
+  outline: none;
+  border: none;
+  background: transparent;
+}
+.container {
+  max-width: 1240px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+a {
+  text-decoration: none;
+}
+.home__section {
+  margin-top: 100px;
+}

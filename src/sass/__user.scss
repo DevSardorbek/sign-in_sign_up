@@ -1,0 +1,20 @@
+.user__wrapper {
+  margin-top: 180px;
+  h2 {
+    margin-bottom: 20px;
+  }
+  .users__section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid;
+    border-radius: 4px;
+    padding: 10px;
+    button {
+      padding: 10px;
+      border-radius: 3px;
+      color: #fff;
+      background-color: red;
+    }
+  }
+}

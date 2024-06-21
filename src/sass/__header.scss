@@ -1,0 +1,33 @@
+.header__wrapper {
+  padding: 20px 0;
+  box-shadow: 1px -3px 10px 2px #beafaf;
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  background-color: #fff;
+  .header__section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    h1 {
+      font-size: 26px;
+      color: rgb(80, 55, 55);
+    }
+    .header__links {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      a {
+        color: black;
+        font-size: 18px;
+        border-bottom: 2px solid #fff;
+        transition: 0.4s;
+        &:hover {
+          border-bottom: 2px solid #000;
+        }
+      }
+    }
+  }
+}
