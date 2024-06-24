@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const mainUrl = axios.create({
-  baseURL: "https://market.ilyosbekdev.uz",
+  // baseURL: "https://bazar.ilyosbekdev.uz",
 });
 
 mainUrl.interceptors.request.use((req) => {

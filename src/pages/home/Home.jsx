@@ -1,11 +1,12 @@
 import React from "react";
+import { useGetProductsQuery } from "../../context/api/productApi";
+import Products from "../../components/products/Products";
 
 const Home = () => {
+  const { data } = useGetProductsQuery();
   return (
     <div className="home__section">
-      <div className="container">
-        <h1>Home</h1>
-      </div>
+      <Products data={data} />
     </div>
   );
 };

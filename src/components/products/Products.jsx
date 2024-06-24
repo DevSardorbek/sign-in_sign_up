@@ -1,44 +1,24 @@
-// import axios from "../../api";
-// import React, { useEffect, useState } from "react";
+import React from "react";
+import "../../sass/__products.scss";
+const Products = ({ data }) => {
+  console.log(data);
+  return (
+    <div className="products__wrapper">
+      <div className="container">
+        <div className="products__section">
+          {data?.data?.products?.map((product) => (
+            <div className="products__card" key={product.id}>
+              <img src={product.urls[0]} alt="" width={200} />
+              <div className="products__info">
+                <h3>{product.title}</h3>
+                <p>{product.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};
 
-// const Products = () => {
-//   const [products, setProducts] = useState([]);
-//   const [error, setError] = useState(null);
-
-//   useEffect(() => {
-//     axios
-//       .get("/products")
-//       .then((res) => {
-//         console.log("products", res.data);
-//         setProducts(res.data);
-//       })
-//       .catch((err) => {
-//         console.error("Error fetching products:", err);
-//         setError("Failed to fetch products.");
-//       });
-//   }, []);
-
-//   return (
-//     <div  className="product__wrapper">
-//       <div className="container">
-//         <h2>Products</h2>
-//         {error && <p>{error}</p>}
-//         <div className="product__section">
-//           {products.length > 0 ? (
-//             products.map((product) => (
-//               <div key={product.id} className="product__item">
-//                 <h3>{product.name}</h3>
-//                 <p>{product.description}</p>
-//                 <p>Price: ${product.price}</p>
-//               </div>
-//             ))
-//           ) : (
-//             <p>No products available.</p>
-//           )}
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default Products;
+export default Products;
